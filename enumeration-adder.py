@@ -45,14 +45,14 @@ class EnumerationAdder:
 
     def __renameToNumbersNames(self, mainPath, files, numberFileNamePattern):
         orderNumber = 1
-        for fileName in files:
-            newFileName = os.path.join(mainPath, ((numberFileNamePattern) % (orderNumber)))
-            if fileName != newFileName:
-                os.rename(fileName, newFileName)
+        for filePath in files:
+            newFileName = (numberFileNamePattern) % orderNumber
+            newFilePath = os.path.join(mainPath, newFileName)
+            if filePath != newFilePath:
+                os.rename(filePath, newFilePath)
 
-            self.logger.log(fileName + ' -> ' + numberFileNamePattern % (orderNumber))
+            self.logger.log(filePath + ' -> ' + newFileName)
             orderNumber += 1
-
 
 if __name__ == '__main__':
     renamer = EnumerationAdder(Logger())
