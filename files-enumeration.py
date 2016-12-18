@@ -14,7 +14,7 @@ class NonLogger:
     def log(self, entry):
         pass
 
-class EnumerationAdder:
+class FileEnumeration:
     def __init__(self, logger = Logger(), minimumZerosPadding = MINIMUM_ZEROS_PADDING):
         self.minimumZerosPadding = minimumZerosPadding
         self.logger = logger
@@ -55,7 +55,7 @@ class EnumerationAdder:
             orderNumber += 1
 
 if __name__ == '__main__':
-    renamer = EnumerationAdder(Logger())
+    renamer = FileEnumeration(Logger())
 
     # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     # for Python < 3.0: mainPath = u"<file name>"

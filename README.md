@@ -34,7 +34,7 @@ renamer.convertFilesNameFromPath('/home/ziomioslaw/filestobeenumare', 'txt')
 Then run:
 
 ```bash
-$ python enumeration-adder.py
+$ python files-enumeration.py
 ```
 
 ## Removing logging
