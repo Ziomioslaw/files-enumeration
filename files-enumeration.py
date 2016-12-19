@@ -15,9 +15,9 @@ class NonLogger:
         pass
 
 class FileEnumeration:
-    def __init__(self, logger = Logger(), minimumZerosPadding = MINIMUM_ZEROS_PADDING):
+    def __init__(self, logger = None, minimumZerosPadding = MINIMUM_ZEROS_PADDING):
         self.minimumZerosPadding = minimumZerosPadding
-        self.logger = logger
+        self.logger = logger if logger != None else Logger()
 
     def convertFilesNameFromPath(self, mainPath, extension):
         if not os.path.isdir(mainPath):
