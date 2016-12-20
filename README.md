@@ -22,19 +22,15 @@ into:
 
 # Usage:
 
-Require editing main file.
-
-Use main class:
-
-```python
-renamer = EnumerationAdder()
-renamer.convertFilesNameFromPath('/home/ziomioslaw/filestobeenumare', 'txt')
-```
-
-Then run:
-
 ```bash
 $ python files-enumeration.py
+Usage: <directory with files> <extension files>
+```
+
+Example:
+
+```bash
+$ python files-enumeration.py /home/ziomioslaw/filestobeenumare txt
 ```
 
 ## Removing logging

@@ -55,8 +55,11 @@ class FileEnumeration:
             orderNumber += 1
 
 if __name__ == '__main__':
-    renamer = FileEnumeration(Logger())
+    import sys
 
-    # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-    # for Python < 3.0: mainPath = u"<file name>"
-    renamer.convertFilesNameFromPath("/home/ziomioslaw/filestobeenumare", "txt")
+    if len(sys.argv) < 3:
+        print('Usage: <directory with files> <extension files>')
+        sys.exit()
+
+    renamer = FileEnumeration(Logger())
+    renamer.convertFilesNameFromPath(sys.argv[1], sys.argv[2])
